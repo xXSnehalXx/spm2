@@ -34,15 +34,32 @@ export default class App extends Component {
           barStyle="light-content"
           backgroundColor="#CCCCCC"
         />
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+        <View style={styles.b1}>
+            <View style={styles.b1b1}>
+            <Text style={styles.topText}>Smart Pocket Meter</Text>
+            </View>
+            <View style={styles.b1b2}>
+                <View style={styles.b1b2b}>
+                    <Text style={styles.otherText}>Unique service number</Text>
+                    <View style={styles.b1b2bb}></View>
+                </View>
+                <View style={styles.b1b2b}>
+                    <Text style={styles.otherText}>Password</Text>
+                    <View style={styles.b1b2bb}></View>
+                </View>
+                <View style={styles.b1b2b}>
+                <Text style={styles.otherText}>Login</Text>
+                </View>
+            </View>
+        </View>
+        <View style={styles.b2}>
+            <View style={styles.b2b}>
+                <Text style={styles.otherText}>Register</Text>
+            </View>
+            <View style={styles.b2b}>
+            <Text style={styles.otherText}>Forgot your password?</Text>
+            </View>
+        </View>
       </View>
     );
   }
@@ -50,20 +67,58 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    paddingTop:Platform.OS=="ios"?22:0,
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#CCCCCC',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-    color: '#F5FCFF',
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#F5FCFF',
-    marginBottom: 5,
-  },
+    },
+    b1:{
+        flex:2,
+        backgroundColor:"brown",
+        margin:4
+    },
+    b1b1:{
+        flex:1,
+        backgroundColor:"aquamarine",
+        margin:4,
+        alignItems:"center",
+        justifyContent:"center"
+    },
+    b1b2:{
+        flex:2,
+        backgroundColor:"aquamarine",
+        margin:4,
+        alignItems:"center"
+    },
+    topText:{
+        fontSize:20,
+        color:"#E6646E"
+    },
+    b1b2b:{
+        margin:4,
+        flex:1,
+        backgroundColor:"brown",
+    },
+    otherText:{
+        fontSize:15,
+        color:"#000000"
+    },
+    b1b2bb:{
+        height:43,
+        width:300,
+        backgroundColor:"white",
+        borderWidth:1
+    },
+    b2:{
+        flex:1,
+        backgroundColor:"brown",
+        margin:4,
+        justifyContent:"flex-end",
+        alignItems:'center'
+    },
+    b2b:{
+        height:40,
+        margin:4,
+        backgroundColor:"aquamarine"
+    }
+
 });
