@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
+    android:background="@color/gray"
     android:gravity="center">
     <ImageView
         android:layout_width="200dp"
@@ -11,4 +11,14 @@
         android:layout_marginTop="24dp"
         android:src="@mipmap/icon"
         />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cantora_one"
+        android:gravity="center"
+        android:text="Smart Pocket Meter"
+        android:textColor="@color/splashred"
+        android:textSize="24sp" />
 </LinearLayout>

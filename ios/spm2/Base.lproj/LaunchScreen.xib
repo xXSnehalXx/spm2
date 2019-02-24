@@ -15,12 +15,27 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splashIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pcw-gw-G2u">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pcw-gw-G2u">
                     <rect key="frame" x="140" y="140" width="200" height="200"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="2vf-f5-cM0"/>
+                        <constraint firstAttribute="height" constant="200" id="fI3-cv-L65"/>
+                    </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Pocket Meter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rtm-1J-6ad">
+                    <rect key="frame" x="129.5" y="348" width="221" height="34"/>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                    <color key="textColor" red="0.90196078431372551" green="0.39215686274509803" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="0.30561348795890808" green="0.42685508728027344" blue="0.48132634162902832" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rtm-1J-6ad" firstAttribute="top" secondItem="pcw-gw-G2u" secondAttribute="bottom" constant="8" id="2Nc-Z4-OpH"/>
+                <constraint firstItem="rtm-1J-6ad" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Cwc-8T-enU"/>
+                <constraint firstItem="pcw-gw-G2u" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Xa2-gf-PgU"/>
+                <constraint firstItem="pcw-gw-G2u" firstAttribute="centerX" secondItem="rtm-1J-6ad" secondAttribute="centerX" id="sCm-ce-x74"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="547.20000000000005" y="454.27286356821594"/>
