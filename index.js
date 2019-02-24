@@ -9,4 +9,4 @@ import UserHome from './src/userHome.js';
 
 import {name as appNAME} from './app.json';
 
-AppRegistry.registerComponent(appNAME, () => Login);
+AppRegistry.registerComponent(appNAME, () => UserHome);

@@ -15,8 +15,12 @@ import {
   TouchableHighlight,
   Alert
 } from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
 
 export default class UserHome extends Component {
+    componentDidMount() {
+    SplashScreen.hide()
+ }
   render() {
     return (
       <View style={styles.container}>
