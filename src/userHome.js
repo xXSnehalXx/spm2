@@ -18,8 +18,10 @@ import {
 import SplashScreen from 'react-native-splash-screen';
 
 export default class UserHome extends Component {
-    componentDidMount() {
-    SplashScreen.hide()
+    componentWillMount() {
+        setTimeout(()=>{
+            SplashScreen.hide();
+            },2000);
  }
   render() {
     return (

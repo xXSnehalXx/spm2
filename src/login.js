@@ -27,7 +27,7 @@ const instructions = Platform.select({
 });
 
 export default class Login extends Component {
-    componentDidMount() {
+    componentWillMount() {
     SplashScreen.hide()
  }
     constructor(props){
