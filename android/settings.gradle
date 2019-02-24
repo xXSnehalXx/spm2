@@ -1,0 +1,3 @@
+rootProject.name = 'spm2'
+
+include ':app'
