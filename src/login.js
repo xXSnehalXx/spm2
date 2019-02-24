@@ -12,7 +12,10 @@ import {
   StyleSheet,
   Text,
   View,
-  StatusBar
+  StatusBar,
+  TextInput,
+  TouchableHighlight,
+  Alert
 } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 
@@ -23,10 +26,22 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class App extends Component {
+export default class Login extends Component {
     componentDidMount() {
     SplashScreen.hide()
  }
+    constructor(props){
+        super(props);
+        this.state = {
+            loginText:'',
+            passwordText:''
+        }
+
+    }
+
+    loginButtonPressed = () => {
+        Alert.alert(`logtext = ${this.state.loginText} pass = ${this.state.passwordText}`);
+    }
   render() {
     return (
       <View style={styles.container}>
@@ -41,14 +56,31 @@ export default class App extends Component {
             <View style={styles.b1b2}>
                 <View style={styles.b1b2b}>
                     <Text style={styles.otherText}>Unique service number</Text>
-                    <View style={styles.b1b2bb}></View>
+                    <View style={styles.b1b2bb}>
+                        <TextInput
+                          style={{height: 43}}
+                          placeholder="eg: 2438988"
+                          onChangeText={(text) => this.setState({loginText:text})}
+                          value={this.state.loginText}
+                        />
+                    </View>
                 </View>
                 <View style={styles.b1b2b}>
                     <Text style={styles.otherText}>Password</Text>
-                    <View style={styles.b1b2bb}></View>
+                    <View style={styles.b1b2bb}>
+                        <TextInput
+                          style={{height: 43}}
+                          placeholder="eg: helloduck"
+                          onChangeText={(text) => this.setState({passwordText:text})}
+                          value={this.state.passwordText}
+                          secureTextEntry={true}
+                        />
+                    </View>
                 </View>
                 <View style={styles.b1b2b}>
-                <Text style={styles.otherText}>Login</Text>
+                    <TouchableHighlight onPress = {this.loginButtonPressed} underlayColor={"#CCCCCC"} activeOpacity={0.5}>
+                        <Text style={styles.otherText}>Login</Text>
+                    </TouchableHighlight>
                 </View>
             </View>
         </View>
@@ -73,19 +105,19 @@ const styles = StyleSheet.create({
     },
     b1:{
         flex:2,
-        backgroundColor:"brown",
+        // backgroundColor:"brown",
         margin:4
     },
     b1b1:{
         flex:1,
-        backgroundColor:"aquamarine",
+        // backgroundColor:"aquamarine",
         margin:4,
         alignItems:"center",
         justifyContent:"center"
     },
     b1b2:{
         flex:2,
-        backgroundColor:"aquamarine",
+        // backgroundColor:"aquamarine",
         margin:4,
         alignItems:"center"
     },
@@ -96,7 +128,7 @@ const styles = StyleSheet.create({
     b1b2b:{
         margin:4,
         flex:1,
-        backgroundColor:"brown",
+        // backgroundColor:"brown",
     },
     otherText:{
         fontSize:15,
@@ -106,11 +138,13 @@ const styles = StyleSheet.create({
         height:43,
         width:300,
         backgroundColor:"white",
-        borderWidth:1
+        borderWidth:1,
+        paddingLeft:5,
+        marginTop:1
     },
     b2:{
         flex:1,
-        backgroundColor:"brown",
+        // backgroundColor:"brown",
         margin:4,
         justifyContent:"flex-end",
         alignItems:'center'
@@ -118,7 +152,7 @@ const styles = StyleSheet.create({
     b2b:{
         height:40,
         margin:4,
-        backgroundColor:"aquamarine"
+        // backgroundColor:"aquamarine"
     }
 
 });
